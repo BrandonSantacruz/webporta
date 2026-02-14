@@ -109,50 +109,25 @@ cardsAndSteps.forEach((element, index) => {
 // CONTACT FORM HANDLING
 // ============================================
 
-const contactForm = document.getElementById('contactForm');
+const contactForm = document.querySelector('form[name="contact"]');
 
 if (contactForm) {
     contactForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-
-        const formData = new FormData(contactForm);
-        const inputs = contactForm.querySelectorAll('input, textarea');
-        
-        // Get form values
-        const name = inputs[0].value;
-        const email = inputs[1].value;
-        const message = inputs[2].value;
-
-        // Validate form
-        if (!name.trim() || !email.trim() || !message.trim()) {
-            alert('Please fill in all fields');
-            return;
-        }
-
-        // Validate email
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!emailRegex.test(email)) {
-            alert('Please enter a valid email address');
-            return;
-        }
-
-        // Show success message
+        // Dejar que Netlify maneje el envío
         const submitButton = contactForm.querySelector('button[type="submit"]');
         const originalText = submitButton.textContent;
-        submitButton.textContent = '✓ Message Sent!';
-        submitButton.style.background = 'linear-gradient(135deg, #10B981, #34D399)';
-
-        // Reset form
-        contactForm.reset();
-
-        // Reset button after 3 seconds
+        
+        // Mostrar mensaje de éxito después del envío
         setTimeout(() => {
-            submitButton.textContent = originalText;
-            submitButton.style.background = '';
-        }, 3000);
-
-        // Here you would typically send the data to a server
-        console.log('Form submitted:', { name, email, message });
+            submitButton.textContent = '✓ ¡Mensaje Enviado!';
+            submitButton.style.background = 'linear-gradient(135deg, #10B981, #34D399)';
+            
+            // Reset después de 3 segundos
+            setTimeout(() => {
+                submitButton.textContent = originalText;
+                submitButton.style.background = '';
+            }, 3000);
+        }, 500);
     });
 }
 

@@ -181,10 +181,10 @@
                         <span class="contact-text">Enviar Correo</span>
                     </a>
                 </div>
-                <form class="contact-form" id="contactForm">
-                    <input type="text" placeholder="Tu Nombre" class="form-input" required>
-                    <input type="email" placeholder="Tu Correo" class="form-input" required>
-                    <textarea placeholder="Tu Mensaje" class="form-textarea" rows="5" required></textarea>
+                <form class="contact-form" name="contact" method="POST" netlify>
+                    <input type="text" name="nombre" placeholder="Tu Nombre" class="form-input" required>
+                    <input type="email" name="correo" placeholder="Tu Correo" class="form-input" required>
+                    <textarea name="mensaje" placeholder="Tu Mensaje" class="form-textarea" rows="5" required></textarea>
                     <button type="submit" class="btn btn-primary">Enviar Mensaje</button>
                 </form>
             </div>
