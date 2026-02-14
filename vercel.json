@@ -1,0 +1,8 @@
+{
+  "projectName": "novaweb-portfolio",
+  "buildCommand": "",
+  "outputDirectory": ".",
+  "framework": "html",
+  "nodeVersion": "18.x",
+  "env": []
+}

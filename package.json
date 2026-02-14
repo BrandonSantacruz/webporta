@@ -1,0 +1,27 @@
+{
+  "name": "novaweb-portfolio",
+  "version": "1.0.0",
+  "description": "Premium web agency portfolio for NovaWeb",
+  "main": "index.html",
+  "scripts": {
+    "serve": "python3 -m http.server 8000",
+    "build": "echo 'No build required - static files ready for deployment'",
+    "deploy": "echo 'Deploy to Vercel, Netlify, or any static hosting provider'"
+  },
+  "keywords": [
+    "portfolio",
+    "web-agency",
+    "novaweb",
+    "premium",
+    "responsive"
+  ],
+  "author": "NovaWeb",
+  "license": "MIT",
+  "deploymentOptions": [
+    "Vercel (recommended)",
+    "Netlify",
+    "GitHub Pages",
+    "Firebase Hosting",
+    "AWS S3 + CloudFront"
+  ]
+}
